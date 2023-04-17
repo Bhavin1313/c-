@@ -40,7 +40,7 @@ class Railway{
 display(Railway r[])
 {
 	int n;
-	cout << "Eneter Number : ";
+	cout << "Enter Number : ";
 	cin >> n;
 	for(int i=0;i<3;i++)
 	{
