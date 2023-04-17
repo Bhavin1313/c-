@@ -9,22 +9,16 @@ using namespace std;
 
 class Cricket{
 	protected :
-	int n,m;
+	int n=20,m=90;
 	
 	public :
 		void getTotalOvers(){
-			
-			cout<<"Enter number of t20 over : ";
-			cin>>n;
-			cout<<"Enter number of test over : ";
-			cin>>m;
+			cout<<"Cricket is a satta bazarr "<<endl;
 		}
 	
 };
 
 class T20Match : public Cricket{
-	protected :
-		int n=20;
 	public :
 	void getTotalOvers()
 		{
@@ -32,9 +26,7 @@ class T20Match : public Cricket{
 		}
 };
 
-class TestMatch : public Cricket{
-	protected :
-	int	m=90;
+class TestMatch : public T20Match{
 	public :
 
 		void getTotalOvers()
@@ -45,11 +37,10 @@ class TestMatch : public Cricket{
 
 int main()
 {
-	T20Match t1;
-	TestMatch t2;
-	t1.Cricket::getTotalOvers();
-	t1.getTotalOvers();
-	t2.getTotalOvers();
+	TestMatch t;
+	t.Cricket::getTotalOvers();
+	t.T20Match::getTotalOvers();
+	t.getTotalOvers();
 	
 		
 }
