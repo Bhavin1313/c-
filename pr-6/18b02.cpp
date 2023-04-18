@@ -1,34 +1,36 @@
-/*1. WAP to create a Message class with a constructor that takes a single string with a default value. 
-Create a private member string, and in the constructor simply assign the argument string to your internal string.
- Create two overloaded member functions called print( ): 
- one that takes no arguments and simply prints the message stored in the object, and one that takes a string argument, 
- which it prints in addition to the internal message.
-*/
+// 2. WAP to add two distances using binary plus (+) operator overloading.
+
 
 #include<iostream>
+
 using namespace std;
 
-class Message{
-	string a="I love cricket";
-	
-	public :
-		Message()
-		{
-			cout<<a;
-		}
-		Message(string s)
-		{
-			cout<<a<<endl;
-			cout<<s;
-		}
+class distances
+{
+    int d;
+
+    public :
+
+    input(){
+
+        cout<<"Enter the distance in Kilometer : "; cin>>d ;
+
+    }
+
+   	distances operator + (distances e)
+    {
+        cout<<"The sum of the distance is : "<<d+e.d<<" km";
+    }
+
 };
 
 main()
+
 {
-	string s;
-	Message m;
-	cout<<"\nEnter your massage "<<s<<endl;
-	cin>>s;
-	Message m1(s);
-	
+    distances a;
+    distances b;
+    distances c;
+    a.input();
+    b.input();
+    c=a+b;
 }
